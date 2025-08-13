@@ -202,32 +202,28 @@
     </form>
 
     <script>
-        document.getElementById('submit-btn').addEventListener('click', function(event) {
-            event.preventDefault();
-            const nameInput = document.getElementById('love-name').value.trim();
-            if (nameInput.toLowerCase() === "Harshitha") {
-                alert("Welcome to the Cake Party! 🎂");
-                window.location.href = "main.html";
-            } else {
-                alert("Oops! Wrong ingredient! 🎂");
-            }
-        });
+    document.getElementById('submit-btn').addEventListener('click', function(event) {
+        event.preventDefault();
+        // Directly open main.html without checking the name
+        window.location.href = "main.html";
+    });
 
-        function createSprinkle() {
-            const sprinkle = document.createElement("div");
-            sprinkle.classList.add("sprinkle");
-            sprinkle.style.left = Math.random() * 100 + "vw";
-            sprinkle.style.background = `hsl(${Math.random() * 360}, 80%, 65%)`;
-            sprinkle.style.animationDuration = Math.random() * 2 + 3 + "s";
-            document.body.appendChild(sprinkle);
+    function createSprinkle() {
+        const sprinkle = document.createElement("div");
+        sprinkle.classList.add("sprinkle");
+        sprinkle.style.left = Math.random() * 100 + "vw";
+        sprinkle.style.background = `hsl(${Math.random() * 360}, 80%, 65%)`;
+        sprinkle.style.animationDuration = Math.random() * 2 + 3 + "s";
+        document.body.appendChild(sprinkle);
 
-            setTimeout(() => {
-                sprinkle.remove();
-            }, 5000);
-        }
+        setTimeout(() => {
+            sprinkle.remove();
+        }, 5000);
+    }
 
-        setInterval(createSprinkle, 250);
-    </script>
+    setInterval(createSprinkle, 250);
+</script>
 
 </body>
+
 </html>
